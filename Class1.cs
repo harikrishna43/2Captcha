@@ -26,7 +26,7 @@ namespace _2Captcha
                 byte[] data = File.ReadAllBytes(_filePath);
                 string filename = Path.GetFileName(_filePath);
                 // fs.Read(data, 0, data.Length);
-                // fs.Close();c31aa3b467f9162a796634dd1321dc63
+                // fs.Close();
 
                 // Generate post objects
                 Dictionary<string, object> postParameters = new Dictionary<string, object>();
@@ -41,10 +41,10 @@ namespace _2Captcha
                 // Create request and receive response
                 string postURL = "http://2captcha.com/in.php?key=" + APIKey;
                 string userAgent = APIKey;
-                HttpWebResponse webResponse = FormUpload.MultipartFormDataPost(postURL, userAgent, postParameters);
+                //HttpWebResponse webResponseexe = FormUpload.MultipartFormDataPost(postURL, userAgent, postParameters);
 
                 // Process response
-                StreamReader responseReader = new StreamReader(webResponse.GetResponseStream());
+                StreamReader responseReader = new StreamReader(webResponse.GetResponseStreamexe());
                 string fullResponse = responseReader.ReadToEnd();
                 webResponse.Close();
                 // cptcha(fullResponse);
