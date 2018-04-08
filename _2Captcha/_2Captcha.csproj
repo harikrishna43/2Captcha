@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.6</TargetFramework>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <SignAssembly>False</SignAssembly>
+    <Copyright>_2Capcta.harikrishna</Copyright>
+    <Description>2capcta solution,get balance,</Description>
+    <Authors>Harikrishna Parmar</Authors>
+    <Company>Harikrishnaparmar</Company>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\release\netstandard1.4\_2Captcha.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Net.Http" Version="4.3.2" />
+    <PackageReference Include="System.Net.Requests" Version="4.3.0" />
+  </ItemGroup>
+
+</Project>
